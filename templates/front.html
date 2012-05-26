@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>{{bag[0][0]}} = {{bag[0][1]}}</p>
+<p>{{bag[1][0]}} = {{bag[1][1]}}</p>
+<p>{{bag[2][0]}} = {{bag[2][1]}}</p>
+  
+ <form action = "/" method = "post">
+ 	
+ <p>{{bag[-1][0]}} = <input type = "text" name = "solution"> ?</p>
+ <input type = "hidden" name = "check" value = "{{bag[-1][1]}}">
+ 	<input type = "submit" value = "Senden">
+ 	
+ <div class="message">{{message}}</div>	
+ 	
+ 	
+ </form>
+ 
+ 
+{% endblock %}
